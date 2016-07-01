@@ -4,7 +4,7 @@
 		display: inline-block;
 	}
 </style>
-<b>Automaton</b> A tool for automatizing FruityWiFi.
+<b>Automaton</b> A tool for automating FruityWiFi.
 <br><br>
 <b>Author</b>: xtr4nge [_AT_] gmail.com - @xtr4nge
 
