@@ -43,12 +43,12 @@ if($service == "automaton") {
     
 	if ($action == "run") {
 		
-		$exec = "python client/fruitywifi_client.py -f templates/$automaton_conf > /dev/null 2 &";
+		$exec = "python client/fruitywifi_client.py -f templates/$automaton_conf -t $api_token > /dev/null 2 &";
 		exec_fruitywifi($exec);
 		
 	} else if ($action == "start") {
 
-        $exec = "python client/fruitywifi_client.py -f templates/$mod_automaton_onstart > /dev/null 2 &";
+        $exec = "python client/fruitywifi_client.py -f templates/$mod_automaton_onstart -t $api_token > /dev/null 2 &";
 		exec_fruitywifi($exec);
 
 		$exec = "echo 'OnStart' > status.txt";
@@ -66,7 +66,7 @@ if($service == "automaton") {
     
     } else if ($action == "stop") {
         
-        $exec = "python client/fruitywifi_client.py -f templates/$mod_automaton_onstop > /dev/null 2 &";
+        $exec = "python client/fruitywifi_client.py -f templates/$mod_automaton_onstop -t $api_token > /dev/null 2 &";
 		exec_fruitywifi($exec);
 
 		$exec = "echo 'OnStop' > status.txt";
